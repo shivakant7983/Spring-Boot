@@ -1,5 +1,6 @@
 package edu.qs.spring_boot_db.dao;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,4 +31,18 @@ public class ProductDao {
 		pRep.save(p);
 	
 	}
+	
+	// find all product
+	
+	public List<Product> findAllProducts(){
+		return pRep.findAll();
+	}
+	
+	// add all product
+	
+	public void addAllProduct(List<Product> prds) {
+		pRep.saveAll(prds);
+	}
+	
+
 }
